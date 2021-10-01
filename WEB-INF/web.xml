@@ -19,6 +19,15 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>PersistentCounter</servlet-name>
+    <servlet-class>PersistentCounter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PersistentCounter</servlet-name>
+    <url-pattern>/persistentCounter</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>GetParametersHtml</servlet-name>
     <servlet-class>GetParametersHtml</servlet-class>
   </servlet>
@@ -34,6 +43,33 @@
   <servlet-mapping>
     <servlet-name>GetParametersServlet</servlet-name>
     <url-pattern>/getParametersServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SignUpForm</servlet-name>
+    <servlet-class>SignUpForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignUpForm</servlet-name>
+    <url-pattern>/signUpForm</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>SignInForm</servlet-name>
+    <servlet-class>SignInForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignInForm</servlet-name>
+    <url-pattern>/signInForm</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SignUp</servlet-name>
+    <servlet-class>SignUp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignUp</servlet-name>
+    <url-pattern>/signUp</url-pattern>
   </servlet-mapping>
 
 </web-app>
