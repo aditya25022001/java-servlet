@@ -9,7 +9,7 @@ public class GetParametersHtml extends HttpServlet {
         writer.println("<html>");
         writer.println("<head>"+link+"<title>getParameters() Method</title></head>");
         writer.println("<body>");
-        writer.println("<form action='/ssp/getParameter' style='width:max-content;' class='mx-auto border mt-5 py-4 px-5'>");
+        writer.println("<form action='/ssp/getParametersServlet' style='width:max-content;' class='mx-auto border mt-5 py-4 px-5'>");
         writer.println("<h6>Servlet Form Data</h6><h6>using getParameters()</h6>");
         writer.println("<div class='m-2'><div><label for='fname'>First Name</label></div><input type='text' name='fname'/></div>");
         writer.println("<div class='m-2'><div><label for='lname'>Last Name</label></div><input type='text' name='lname'/></div>");

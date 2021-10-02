@@ -11,6 +11,8 @@ public class SignUp extends HttpServlet {
                 String user = users.readLine();
                 String userEmail = user.split("########")[1];
                 unique = !email.equals(userEmail);
+                if(!unique)
+                    break;
             }
             users.close();   
         }

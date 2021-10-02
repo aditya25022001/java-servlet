@@ -72,4 +72,13 @@
     <url-pattern>/signUp</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>SignIn</servlet-name>
+    <servlet-class>SignIn</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignIn</servlet-name>
+    <url-pattern>/signIn</url-pattern>
+  </servlet-mapping>
+
 </web-app>
