@@ -1,59 +1,35 @@
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-
-public class PersistentCounter extends HttpServlet {
-  int count;
-  public void init() throws ServletException {
-    FileReader fileReader = null;
-    BufferedReader bufferedReader = null;
-    try {
-      fileReader = new FileReader("InitDestroyCounter.initial");
-      bufferedReader = new BufferedReader(fileReader);
-      String initial = bufferedReader.readLine();
-      count = Integer.parseInt(initial);
+public class PersistentCounter extends HttpServlet{
+  int countServlet;
+  public void init() throws ServletException{
+    try{
+      BufferedReader counter = new BufferedReader(new FileReader("D:\\counter.txt"));
+      int count = Integer.parseInt(counter.readLine());
+      countServlet = count;
+      counter.close();
       return;
     }
-    catch (FileNotFoundException ignored) { }  
-    catch (IOException ignored) { }            
-    catch (NumberFormatException ignored) { }  
-    finally {
-      try {
-        if (bufferedReader != null) {
-          bufferedReader.close();
-        }
-      }
-      catch (IOException ignored) { }
-    }
-    String initial = getInitParameter("initial");                    
-    try {                                                            
-      count = Integer.parseInt(initial);                             
-      return;                                                        
-    }                                                                
-    catch (NumberFormatException ignored) { }
-    count = 0;                                                       
-  }                                                                  
-  public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-    res.setContentType("text/plain");                                
-    PrintWriter out = res.getWriter();                               
-    count++;                                                         
-    out.println("Since the beginning, this servlet has been accessed " + count + " times.");                                  
-  }                                                                 
-                                                                     
-  public void saveState() {                                          
-    FileWriter fileWriter = null;
-    PrintWriter printWriter = null;
-    try {                                                            
-      fileWriter = new FileWriter("InitDestroyCounter.initial");
-      printWriter = new PrintWriter(fileWriter);         
-      printWriter.println(count);                                  
-      return;                                                        
-    }                                                                
-    catch (IOException e) {}
-    finally {
-      if (printWriter != null) {
-        printWriter.close();
-      }
-    }
+    catch(Exception e){}
+  }
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    response.setContentType("text/html");
+    countServlet++;
+    PrintWriter writer = response.getWriter();
+    String link = "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU' crossorigin='anonymous'>"; 
+    writer.println("<html>");
+    writer.println("<head>"+link+"<title>getParameters() Method</title></head>");
+    writer.println("<body>");
+    writer.println("Counter value = "+countServlet);
+    writer.println("</body>");
+    writer.println("</head>");
+  }
+  public void destroy(){
+    try {
+      BufferedWriter counter = new BufferedWriter(new FileWriter("D:\\counter.txt"));
+      counter.write(Integer.toString(countServlet));
+      counter.close();
+    } catch (Exception e) {}
   }
 }

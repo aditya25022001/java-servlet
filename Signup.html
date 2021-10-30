@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title>SSP programs</title>
+    </head>
+    <body>
+        <form action='/ssp/signUp' method='post' style='width:max-content;' class='mx-auto border mt-5 py-4 px-3'>
+            <h6>Java Servlet Course</h6><h6>Sign Up!</h6>
+            <div class='m-2'>
+                <div>
+                    <label for='name'>Name</label>
+                </div>
+                <input type='text' name='name'/>
+            </div>
+            <div class='m-2'>
+                <div>
+                    <label for='email'>Email</label>
+                </div>
+                <input type='email' inputmode='email' name='email'/>
+            </div>
+            <div class='m-2'>
+                <div>
+                    <label for='password'>Password</label>
+                </div>
+                <input type='password' name='password'/>
+            </div>
+            <div class='m-2'>
+                <div>
+                    <label for='password'>Confirm Password</label>
+                </div>
+                <input type='password' name='cnfpassword'/>
+            </div>
+            <div class='m-2'>
+                <a style='color:black;' href='/ssp/Signin.html'>Sign In ?</a>
+            </div>
+            <div class='m-2 mt-3'>
+                <input class='w-100' type='submit' value='Submit'/>
+            </div>
+        </form>
+    </body>
+</html>

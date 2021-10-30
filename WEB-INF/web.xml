@@ -28,39 +28,12 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>GetParametersHtml</servlet-name>
-    <servlet-class>GetParametersHtml</servlet-class>
+    <servlet-name>StudentEntryServlet</servlet-name>
+    <servlet-class>StudentEntryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>GetParametersHtml</servlet-name>
-    <url-pattern>/getParametersHtml</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>GetParametersServlet</servlet-name>
-    <servlet-class>GetParametersServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>GetParametersServlet</servlet-name>
-    <url-pattern>/getParametersServlet</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-    <servlet-name>SignUpForm</servlet-name>
-    <servlet-class>SignUpForm</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SignUpForm</servlet-name>
-    <url-pattern>/signUpForm</url-pattern>
-  </servlet-mapping>
- 
-  <servlet>
-    <servlet-name>SignInForm</servlet-name>
-    <servlet-class>SignInForm</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SignInForm</servlet-name>
-    <url-pattern>/signInForm</url-pattern>
+    <servlet-name>StudentEntryServlet</servlet-name>
+    <url-pattern>/studentEntryServlet</url-pattern>
   </servlet-mapping>
 
   <servlet>

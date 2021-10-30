@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title>SSP programs</title>
+        <style>
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/ssp/studentEntryServlet" method="post" class='mx-auto border p-3 mt-2' style="width:max-content;">
+            <div class='mb-2'>
+                <div>
+                    <label>First Name</label>
+                </div>
+                <input class='w-100' type="text" name="fname"/>
+            </div>
+            <div class='mb-2'>
+                <div>
+                    <label>Last Name</label>
+                </div>
+                <input type="text" class='w-100' name="lname"/>
+            </div>
+            <fieldset class="border p-2 mb-2">
+                <h6>College Credentials</h6>
+                <div>
+                    <div>
+                        <label>Email</label>
+                    </div>
+                    <input class='w-100' type="email" name="email"/>
+                </div>
+                <div>
+                    <div>
+                        <label>Roll Number</label>
+                    </div>
+                    <input class='w-100' type="text" name="rollno"/>
+                </div>
+            </fieldset>
+            <div class='mb-2'>
+                <label>About</label>
+                <div>
+                    <textarea style="font-size:12px;" name="about" class='w-100' rows="5"></textarea>
+                </div>
+            </div>
+            <div class='mb-2'>
+                <div>Gender</div>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="CSS">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+            <div class='mb-2'>
+                <label>Branch</label>
+                <select class='w-100' name="branch">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Electronics & Communication">Electronics & Communication</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Information technology">Information technology</option>
+                </select>
+            </div>
+            <div class='mb-2'>
+                <label>Semester</label>
+                <select class='w-100' name="sem">
+                    <option value="1st">1st</option>
+                    <option value="2nd">2nd</option>
+                    <option value="3rd">3rd</option>
+                    <option value="4th">4th</option>
+                    <option value="5th">5th</option>
+                    <option value="6th">6th</option>
+                    <option value="7th">7th</option>
+                    <option value="8th">8th</option>
+                </select>
+            </div>
+            <div class='mb-2'>
+                <div>Languages Opted</div>
+                <input type="checkbox" name="languages" value="German">
+                <label for="german">German</label>
+                <input type="checkbox" name="languages" value="French">
+                <label for="french">French</label>
+                <input type="checkbox" name="languages" value="Chinese">
+                <label for="chinese">Chinese</label>
+                <input type="checkbox" name="languages" value="Japanese">
+                <label for="japanese">Japanese</label>
+            </div>
+            <div class='mb-2'>
+                <div>
+                    <label>Elective</label>
+                </div>
+                <input class='w-100' name="elective" list="elective"/>
+                <datalist id="elective">
+                    <option value="ML">ML</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </datalist>
+            </div>
+            <div>
+                <button class='w-100 border-0' type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

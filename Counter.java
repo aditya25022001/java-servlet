@@ -12,3 +12,4 @@ public class Counter extends HttpServlet{
         writer.println("<html><head>"+link+"</head><body><h4>Counter!</h4><div>The current value of the counter is : "+ counter +"</div></body></html>");
     }   
 }
+// C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar

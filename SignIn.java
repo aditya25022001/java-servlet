@@ -35,7 +35,7 @@ public class SignIn extends HttpServlet{
             writer.println("<html>");
             writer.println("<head>"+link+"<title>getParameters() Method</title></head>");
             writer.println("<body>");
-            writer.println("<div class='pl-5 mt-5'>Used Credentials or invalid data</div>");
+            writer.println("<div class='pl-5 mt-5'>Invalid data</div>");
             writer.println("</body>");
             writer.println("</html>");
         }
